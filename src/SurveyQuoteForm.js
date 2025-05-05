@@ -77,7 +77,7 @@ if (submitted) {
   return (
     <div className="flex flex-col justify-center items-center min-h-screen bg-gradient-to-br from-[#489d97] to-[#d9eeec] overflow-hidden">
       <div className="font-sans w-full max-w-md mx-auto px-4 sm:px-6 text-center animate-fade-in">
-        <img src={logoUrl} alt="Logo" className="mx-auto mb-6 h-12" />
+        <img src={logoUrl} alt="Logo" className="mx-auto mb-6 h-16" />
         <h2 className="text-xl font-bold text-[#373f50] mb-4">Thank you, {firstName}!</h2>
         <p className="text-gray-700">
           Your referral has been received. Our team will handle the rest and ensure the customer gets the best possible experience.
@@ -114,7 +114,7 @@ if (submitted) {
   return (
     <div className="flex flex-col justify-center items-center min-h-screen bg-gradient-to-br from-[#489d97] to-[#d9eeec] overflow-hidden">
       <div className="font-sans w-full max-w-md mx-auto px-4 sm:px-6">
-        <img src={logoUrl} alt="Logo" className="mx-auto mb-8 h-12" />
+        <img src={logoUrl} alt="Logo" className="mx-auto mb-8 h-16" />
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="flex gap-2">
             <input
