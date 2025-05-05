@@ -71,26 +71,44 @@ export default function SurveyQuoteForm() {
 
   const logoUrl = "https://acresurveying.co.uk/wp-content/uploads/2025/02/acre-surveying-logo.png";
 
-  if (submitted) {
-    const firstName = formData.first_name;
-    return (
-      <div className="flex flex-col justify-center items-center min-h-screen bg-gradient-to-br from-[#EAE4FB] to-white overflow-hidden">
-        <div className="font-sans w-full max-w-md mx-auto px-4 sm:px-6 text-center">
-          <img src={logoUrl} alt="Logo" className="mx-auto mb-6 h-12" />
-          <h2 className="text-xl font-bold text-[#312e81] mb-4">Thank you {firstName}!</h2>
-          <p className="text-gray-700">
-            By referring customers like this, you are helping to support the business with good quality referral-based work — which is how you help us to drive fees up and also reward you.
-          </p>
-          <p className="text-gray-700 mt-2">
-            Thank you for your support, {firstName}.<br />Keep up the great work.
-          </p>
-          <p className="text-lg font-semibold text-[#312e81] mt-6">Estimated Survey Quote:</p>
-          <div className="my-2 border-t border-gray-300 w-1/2 mx-auto"></div>
-          <p className="text-2xl font-bold text-[#312e81] mt-2">£{quote} (incl. VAT)</p>
-        </div>
+if (submitted) {
+  const firstName = formData.referred_by_name?.split(' ')[0] || 'there';
+  return (
+    <div className="flex flex-col justify-center items-center min-h-screen bg-gradient-to-br from-[#EAE4FB] to-white overflow-hidden">
+      <div className="font-sans w-full max-w-md mx-auto px-4 sm:px-6 text-center animate-fade-in">
+        <img src={logoUrl} alt="Logo" className="mx-auto mb-6 h-12" />
+        <h2 className="text-xl font-bold text-[#312e81] mb-4">Thank you, {firstName}!</h2>
+        <p className="text-gray-700">
+          Your referral has been received. Our team will handle the rest and ensure the customer gets the best possible experience.
+        </p>
+        <p className="text-gray-700 mt-2">
+          We appreciate your continued support. This kind of introduction helps us grow sustainably while rewarding you in return.
+        </p>
+        <p className="text-lg font-semibold text-[#312e81] mt-6">Estimated Survey Quote:</p>
+        <div className="my-2 border-t border-gray-300 w-1/2 mx-auto"></div>
+        <p className="text-2xl font-bold text-[#312e81] mt-2">£{quote} (incl. VAT)</p>
+        <button
+          onClick={() => {
+            setSubmitted(false);
+            setFormData({
+              first_name: '',
+              last_name: '',
+              postcode: '',
+              value: '',
+              email: '',
+              phone: '',
+              referred_by_name: '',
+            });
+          }}
+          className="mt-6 bg-[#312e81] text-white px-4 py-2 rounded hover:bg-[#252162]"
+        >
+          Submit Another Quote Request
+        </button>
       </div>
-    );
-  }
+    </div>
+  );
+}
+
 
   return (
     <div className="flex flex-col justify-center items-center min-h-screen bg-gradient-to-br from-[#EAE4FB] to-white overflow-hidden">
