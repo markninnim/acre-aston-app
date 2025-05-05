@@ -1,6 +1,6 @@
 {
-  "short_name": "Acre Surveying",
-  "name": "Acre Surveying App",
+  "short_name": "Aston Vaughan",
+  "name": "Aston Vaughan Surveying App",
   "icons": [
     {
       "src": "icon-192x192.png",
@@ -15,6 +15,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#312e81",
+  "theme_color": "#88cbf2",
   "background_color": "#ffffff"
 }
