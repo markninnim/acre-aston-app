@@ -74,7 +74,7 @@ export default function SurveyQuoteForm() {
 if (submitted) {
   const firstName = formData.referred_by_name?.split(' ')[0] || 'there';
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen bg-gradient-to-br from-[#04a097] to-[#6ecef5] overflow-hidden">
+    <div className="flex flex-col justify-center items-center min-h-screen bg-gradient-to-br from-[#489d97] to-[#d9eeec] overflow-hidden">
       <div className="font-sans w-full max-w-md mx-auto px-4 sm:px-6 text-center animate-fade-in">
         <img src={logoUrl} alt="Logo" className="mx-auto mb-6 h-12" />
         <h2 className="text-xl font-bold text-[#6ecef5] mb-4">Thank you, {firstName}!</h2>
@@ -111,7 +111,7 @@ if (submitted) {
 }
 
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen bg-gradient-to-br from-[#04a097] to-[#6ecef5] overflow-hidden">
+    <div className="flex flex-col justify-center items-center min-h-screen bg-gradient-to-br from-[#489d97] to-[#d9eeec] overflow-hidden">
       <div className="font-sans w-full max-w-md mx-auto px-4 sm:px-6">
         <img src={logoUrl} alt="Logo" className="mx-auto mb-8 h-12" />
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -122,7 +122,7 @@ if (submitted) {
               value={formData.first_name}
               onChange={handleChange}
               required
-              className="w-1/2 px-4 py-2 border border-[#6ecef5] rounded"
+              className="w-1/2 px-4 py-2  rounded"
             />
             <input
               name="last_name"
@@ -130,7 +130,7 @@ if (submitted) {
               value={formData.last_name}
               onChange={handleChange}
               required
-              className="w-1/2 px-4 py-2 border border-[#6ecef5] rounded"
+              className="w-1/2 px-4 py-2  rounded"
             />
           </div>
           <input
@@ -139,7 +139,7 @@ if (submitted) {
             value={formData.postcode}
             onChange={handleChange}
             required
-            className="w-full px-4 py-2 border border-[#6ecef5] rounded"
+            className="w-full px-4 py-2  rounded"
           />
           <input
             name="value"
@@ -148,7 +148,7 @@ if (submitted) {
             value={formData.value}
             onChange={handleChange}
             required
-            className="w-full px-4 py-2 border border-[#6ecef5] rounded"
+            className="w-full px-4 py-2  rounded"
           />
           <input
             name="email"
@@ -157,7 +157,7 @@ if (submitted) {
             value={formData.email}
             onChange={handleChange}
             required
-            className="w-full px-4 py-2 border border-[#6ecef5] rounded"
+            className="w-full px-4 py-2  rounded"
           />
           <input
             name="phone"
@@ -165,7 +165,7 @@ if (submitted) {
             value={formData.phone}
             onChange={handleChange}
             required
-            className="w-full px-4 py-2 border border-[#6ecef5] rounded"
+            className="w-full px-4 py-2  rounded"
           />
           <input
             name="referred_by_name"
@@ -173,7 +173,7 @@ if (submitted) {
             value={formData.referred_by_name}
             onChange={handleChange}
             required
-            className="w-full px-4 py-2 border border-[#6ecef5] rounded"
+            className="w-full px-4 py-2  rounded"
           />
           <button
             type="submit"
@@ -184,7 +184,7 @@ if (submitted) {
           </button>
         </form>
 
-        <p className="mt-6 text-sm text-[#312e81] text-center font-medium bg-indigo-50 border border-indigo-200 p-3 rounded-lg shadow-sm">
+        <p className="mt-6 text-sm text-white text-center font-medium bg-[#373f50] p-3 rounded-lg">
           Upon submitting this information the homeowner will receive a bespoke quotation based on their property value. If they are happy with the quote, they can follow the booking link and pay online.
         </p>
       </div>
