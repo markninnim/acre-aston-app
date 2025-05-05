@@ -15,8 +15,8 @@ export default function SurveyQuoteForm() {
   const [quote, setQuote] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  const logoUrl = "public/logo512.png";
-  const companyLogoUrl = "public/acre_surveying.png";
+  const logoUrl = "/logo512.png";
+  const companyLogoUrl = "/acre_surveying.png";
 
   useEffect(() => {
     const timer = setTimeout(() => setShowIntro(false), 3000);
