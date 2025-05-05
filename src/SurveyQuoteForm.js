@@ -53,7 +53,7 @@ export default function SurveyQuoteForm() {
       data.append('postcode', formData.postcode);
       data.append('value', formData.value);
       data.append('referred_by_name', formData.referred_by_name);
-      data.append('referred_by_firm', astonvaughan);
+      data.append('referred_by_firm', 'Aston Vaughan');
 
       await fetch('https://acresurveying.co.uk/?fluentcrm=1&route=contact&hash=9d18b263-b9c2-44b5-8b0c-06b04b99e997', {
         method: 'POST',
