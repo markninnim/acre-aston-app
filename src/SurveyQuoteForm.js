@@ -156,11 +156,7 @@ export default function SurveyQuoteForm() {
             inputMode="numeric"
             pattern="[0-9]*"
             value={formData.value}
-            onChange={(e) => {
-              const raw = e.target.value.replace(/[^\d]/g, '');
-              const formatted = raw.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-              handleChange({ target: { name: 'value', value: formatted } });
-            }}
+            onChange={handleChange}
             required
             aria-required="true"
             className="w-full px-4 py-2 rounded"
