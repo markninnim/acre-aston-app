@@ -24,13 +24,12 @@ export default function SurveyQuoteForm() {
   }, []);
 
   const handleChange = (e) => {
-  const { name, value } = e.target;
-  const formattedValue = name.includes('name')
-    ? value.replace(/\b\w/g, (l) => l.toUpperCase())
-    : value;
-  setFormData((prev) => ({ ...prev, [name]: formattedValue }));
-};
-
+    const { name, value } = e.target;
+    const formattedValue = name.includes('name')
+      ? value.replace(/\b\w/g, (l) => l.toUpperCase())
+      : value;
+    setFormData((prev) => ({ ...prev, [name]: formattedValue }));
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -83,7 +82,7 @@ export default function SurveyQuoteForm() {
     return (
       <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-[#489d97] to-[#d9eeec] transition-opacity duration-1000 opacity-100 animate-fade-out">
         <div className="text-center animate-fade-in">
-          <div className="w-6 h-6 border-4 border-white border-t-[#6ecef5] rounded-full animate-spin mx-auto mb-8"></div>
+          <img src="/spinner.svg" alt="Loading Spinner" className="mx-auto mb-8 h-10 w-10 animate-spin" />
           <img src={logoUrl} alt="Acre Surveying Logo" className="mx-auto mb-4 h-16 w-auto max-w-[200px]" />
           <img src={companyLogoUrl} alt="Company Logo" className="mx-auto h-16 w-auto max-w-[200px]" />
         </div>
@@ -186,25 +185,24 @@ export default function SurveyQuoteForm() {
             className="w-full px-4 py-2 rounded"
           />
 
-       <input
-  name="phone"
-  inputMode="numeric"
-  
-  placeholder="Phone Number"
-  value={formData.phone}
-  onChange={(e) => {
-    const digitsOnly = e.target.value.replace(/[^0-9]/g, '').slice(0, 11);
-    const formatted = digitsOnly.replace(/(\d{5})(\d{3})(\d{0,3})/, (match, p1, p2, p3) => {
-      let result = p1;
-      if (p2) result += ' ' + p2;
-      if (p3) result += ' ' + p3;
-      return result;
-    });
-    handleChange({ target: { name: 'phone', value: formatted } });
-  }}
-  required
-  className="w-full px-4 py-2 rounded"
-/>
+          <input
+            name="phone"
+            inputMode="numeric"
+            placeholder="Phone Number"
+            value={formData.phone}
+            onChange={(e) => {
+              const digitsOnly = e.target.value.replace(/[^0-9]/g, '').slice(0, 11);
+              const formatted = digitsOnly.replace(/(\d{5})(\d{3})(\d{0,3})/, (match, p1, p2, p3) => {
+                let result = p1;
+                if (p2) result += ' ' + p2;
+                if (p3) result += ' ' + p3;
+                return result;
+              });
+              handleChange({ target: { name: 'phone', value: formatted } });
+            }}
+            required
+            className="w-full px-4 py-2 rounded"
+          />
 
           <input
             name="referred_by_name"
