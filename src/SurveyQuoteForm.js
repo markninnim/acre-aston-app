@@ -33,7 +33,7 @@ export default function SurveyQuoteForm() {
     setLoading(true);
 
     try {
-      const propertyValue = parseInt(formData.value.replace(/,/g, ''), 10);
+      const propertyValue = parseInt(formData.value.replace(/,/g, ''), 10) || 0;
       let estimatedQuote;
       if (propertyValue <= 100000) estimatedQuote = 299;
       else if (propertyValue <= 200000) estimatedQuote = 349;
