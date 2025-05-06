@@ -54,7 +54,10 @@ export default function SurveyQuoteForm() {
       setQuote(estimatedQuote);
 
       const data = new FormData();
-      Object.entries(formData).forEach(([key, value]) => data.append(key, value));
+      Object.entries(formData).forEach(([key, value]) => {
+        const cleanValue = key === 'value' ? value.replace(/,/g, '') : value;
+        data.append(key, cleanValue);
+      });
       data.append('referred_by_firm', 'Aston Vaughan');
 
       await fetch('https://acresurveying.co.uk/?fluentcrm=1&route=contact&hash=9d18b263-b9c2-44b5-8b0c-06b04b99e997', {
