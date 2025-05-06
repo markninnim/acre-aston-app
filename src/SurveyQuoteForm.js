@@ -204,7 +204,7 @@ export default function SurveyQuoteForm() {
         </form>
 
         <p className="mt-6 text-sm text-white text-center font-medium bg-[#373f50] p-3 rounded-lg">
-          Upon submitting this information the homeowner will receive a bespoke quotation based on their property value. If they are happy with the quote, they can follow the booking link and pay online.
+          Upon submitting this information the homebuyer will receive a bespoke quotation based on their property value. If they are happy with the quote, they can follow the booking link and pay online.
         </p>
       </div>
     </div>
