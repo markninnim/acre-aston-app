@@ -38,20 +38,20 @@ export default function SurveyQuoteForm() {
     try {
       const propertyValue = parseInt(formData.value.replace(/,/g, ''), 10) || 0;
       let estimatedQuote;
-      if (propertyValue <= 100000) estimatedQuote = 299;
-      else if (propertyValue <= 200000) estimatedQuote = 349;
-      else if (propertyValue <= 300000) estimatedQuote = 399;
-      else if (propertyValue <= 400000) estimatedQuote = 449;
-      else if (propertyValue <= 500000) estimatedQuote = 499;
-      else if (propertyValue <= 600000) estimatedQuote = 549;
-      else if (propertyValue <= 700000) estimatedQuote = 599;
-      else if (propertyValue <= 800000) estimatedQuote = 649;
-      else if (propertyValue <= 900000) estimatedQuote = 699;
-      else if (propertyValue <= 1000000) estimatedQuote = 749;
-      else if (propertyValue <= 1250000) estimatedQuote = 799;
-      else if (propertyValue <= 1500000) estimatedQuote = 899;
-      else if (propertyValue <= 1750000) estimatedQuote = 949;
-      else if (propertyValue <= 2000000) estimatedQuote = 999;
+      if (propertyValue <= 100000) estimatedQuote = 499;
+      else if (propertyValue <= 200000) estimatedQuote = 499;
+      else if (propertyValue <= 300000) estimatedQuote = 549;
+      else if (propertyValue <= 400000) estimatedQuote = 599;
+      else if (propertyValue <= 500000) estimatedQuote = 649;
+      else if (propertyValue <= 600000) estimatedQuote = 699;
+      else if (propertyValue <= 700000) estimatedQuote = 749;
+      else if (propertyValue <= 800000) estimatedQuote = 799;
+      else if (propertyValue <= 900000) estimatedQuote = 849;
+      else if (propertyValue <= 1000000) estimatedQuote = 899;
+      else if (propertyValue <= 1250000) estimatedQuote = 949;
+      else if (propertyValue <= 1500000) estimatedQuote = 999;
+      else if (propertyValue <= 1750000) estimatedQuote = 1049;
+      else if (propertyValue <= 2000000) estimatedQuote = 1099;
       else estimatedQuote = 'Price on application';
 
       setQuote(estimatedQuote);
